@@ -69,7 +69,7 @@ describe('CatalogoService', () => {
 
       const result = await service.create(dto);
 
-      expect(tiendaClient.exists).toHaveBeenCalledWith(dto.tiendaId);
+      expect(tiendaService.exists).toHaveBeenCalledWith(dto.tiendaId);
       expect(repository.create).toHaveBeenCalledWith(dto);
       expect(result.id).toBe('catalogo-1');
     });

@@ -90,7 +90,7 @@ describe('PedidoService', () => {
 
       const result = await service.create(dto);
 
-      expect(tiendaClient.exists).toHaveBeenCalledWith('tienda-1');
+      expect(tiendaService.exists).toHaveBeenCalledWith('tienda-1');
       expect(productoRepository.findById).toHaveBeenCalledWith('prod-1');
       expect(repository.create).toHaveBeenCalled();
       expect(result).toEqual(
